@@ -1,0 +1,12 @@
+@font-face {
+    src: url(fonts/Orbitron-VariableFont_wght.ttf);
+    font-family: orbitron;
+}
+    
+h1{font-family: orbitron;
+    font-size: 60px;
+    color: white;
+    background-color: black;
+    margin: -10px;
+    text-align: center;}
+body{background-color: #0c53a6;}
