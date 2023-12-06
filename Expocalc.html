@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic Equation Solver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .solution-step {
+            margin-top: 20px;
+        }
+        #nextStepBtn {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quadratic Equation Solver</h1>
+    
+    <label for="a">Enter coefficient a:</label>
+    <input type="text" id="a" placeholder="Enter a">
+    
+    <label for="b">Enter coefficient b:</label>
+    <input type="text" id="b" placeholder="Enter b">
+    
+    <label for="c">Enter coefficient c:</label>
+    <input type="text" id="c" placeholder="Enter c">
+    
+    <button onclick="startSolving()">Start Solving</button>
+
+    <div id="solution" class="solution-step"></div>
+    <button id="nextStepBtn" onclick="nextStep()" style="display: none;">Next Step</button>
+
+    <script>
+        var a, b, c;
+        var step = 0;
+        var solutions = [];
+
+        function startSolving() {
+            a = parseFloat(document.getElementById("a").value);
+            b = parseFloat(document.getElementById("b").value);
+            c = parseFloat(document.getElementById("c").value);
+
+            solutions = solveQuadratic(a, b, c);
+            step = 0;
+
+            showStep();
+        }
+
+        function solveQuadratic(a, b, c) {
+            var discriminant = b * b - 4 * a * c;
+            var result = [];
+
+            if (discriminant > 0) {
+                var x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                var x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                result.push(`The discriminant is positive (${discriminant}), so there are two real solutions:`);
+                result.push(`x1 = ${x1}`);
+                result.push(`x2 = ${x2}`);
+            } else if (discriminant === 0) {
+                var x = -b / (2 * a);
+                result.push(`The discriminant is zero (${discriminant}), so there is one real solution:`);
+                result.push(`x = ${x}`);
+            } else {
+                result.push(`The discriminant is negative (${discriminant}), so there are no real solutions.`);
+            }
+
+            return result;
+        }
+
+        function showStep() {
+            var solutionElement = document.getElementById("solution");
+            var nextStepBtn = document.getElementById("nextStepBtn");
+
+            if (step < solutions.length) {
+                solutionElement.innerHTML = solutions[step];
+                step++;
+                nextStepBtn.style.display = "block";
+            } else {
+                nextStepBtn.style.display = "none";
+            }
+        }
+
+        function nextStep() {
+            showStep();
+        }
+    </script>
+</body>
+</html>
