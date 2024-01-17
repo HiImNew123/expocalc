@@ -42,6 +42,33 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ddd;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
     </style>
 </head>
@@ -53,7 +80,10 @@
 
     <nav>
         <a href="https://hiimnew123.github.io/expocalc/homepage#">Home</a>
-        <a href="#">Courses</a>
+        <div class="dropdown">
+            <a href="#">Courses</a>
+            <div class="dropdown-content">
+                <a href="#quadratic">Quadratic Equations</a>
         <a href="#">About Us</a>
         <a href="#">Contact</a>
     </nav>
