@@ -34,44 +34,57 @@
             padding: 2em;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
 
-        .dropdown {
-            display: inline-block;
-            position: relative;
-        }
+		h2{
+		text-align:center;
+		}
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #ddd;
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+		p{
+		text-align:center;
+		}
+		
+		dd{
+		margin:30px;
+		}
+		
+		dt{
+		font-size:30px;
+		}
+		
+		    #slider-container {
+      overflow: hidden;
+      margin: 20px;
+      border: 1px solid;
+      position: relative;
+    }
+		
+    #slider-content {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
 
-        .dropdown-content a {
-            display: block;
-            padding: 8px;
-            text-decoration: none;
-            color: #333;
-        }
+    .slide {
+      flex: 0 0 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      text-align: center;
+    }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+    #prevBtn, #nextBtn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      cursor: pointer;
+    }
 
+    #prevBtn {
+      left: 0;
+    }
+
+    #nextBtn {
+      right: 0;
+    }
     </style>
 </head>
 <body>
@@ -88,11 +101,112 @@
     </nav>
 
     <section>
+		<h2>Welcone to EXPOCALC!</h2>
+		<p>An educational technology made to help students and life long learners build knowledge and develop skills in Mathematics. Do you wish to explore different calculators with us? Then let's get started.</p>
+		
+<div id="slider-container">
+  <div id="slider-content">
+    <div class="slide">		<dl>
+		<dt><b>Quadratic function</b></dt>
+		<dd>In mathematics, a quadratic polynomial is a polynomial of degree two in one or more variables. A quadratic function is the polynomial function defined by a quadratic polynomial. A quadratic function is one of the form f(x) = ax2 + bx + c, where a, b, and c are numbers with a not equal to zero.
+		</dd>
+		
+		<dt><b>What is a quadratic function example?</b></dt>
+		<dd>A quadratic function has a term to the second power. An example would be x^2 - 4x + 3. There are several forms in which a quadratic function can be written.
+		</dd>
+		
+		<dt><b>What are quadratic functions?</b></dt>
+		<dd>
+		Quadratic functions are polynomials with terms to the second degree. In other words, a term in the equation can be to the power of two, but not higher.
+		</dd>
+		
+		<dt><b>What is the range of a quadratic?</b></dt>
+		<dd>
+		The range refers to all possible values of y. To find the range, determine the vertex. If the parabola opens up, the range includes the y-value of the vertex and all numbers greater than it. If the parabola opens down, the range includes the y-value of the vertex and all numbers less than it.
+		</dd>
+		
+		<dt><b>What are the 3 quadratic formulas?</b></dt>
+		<dd>
+		Standard form is one, written as f(x) = ax^2 + bx + c. Factored form is another, which is written as f(x) = (x - p)(x - q). A third form is  vertex form, written as f(x) = a(x - h)^2 + k.
+		</dd>						</div>
+    <div class="slide"><dt><b>Linear function</b></dt>
+<dd>
+Linear function is a function which forms a straight line in a graph. It is generally a polynomial function whose degree is utmost 1 or 0. Although the linear functions are also represented in terms of calculus as well as linear algebra. The only difference is the function notation.
+</dd>
 
-    </section>
+<dt><b>What is a linear function example?</b></dt>
+<dd>
+A linear function is a function that represents a straight line on the coordinate plane. For example, y = 3x - 2 represents a straight line on a coordinate plane and hence it represents a linear function. Since y can be replaced with f(x), this function can be written as f(x) = 3x - 2.
+</dd>
 
-    <footer>
-       
-    </footer>
+<dt><b>What are linear functions?</b></dt>
+<dd>
+Linear functions are those whose graph is a straight line. A linear function has the following form. y = f(x) = a + bx. A linear function has one independent variable and one dependent variable. The independent variable is x and the dependent variable is y.
+</dd>
+
+<dt><b>What is the range of a linear function?</b></dt>
+<dd>
+Linear functions (almost) always have infinite domains and ranges. The exception is when the graph is a horizontal line. This happens for functions that equal a constant such as f(x) = b. These functions have infinite domains but a range that has only one value, b.
+</dd>
+
+</div>
+    <div class="slide"><dt><b>Rational function</b></dt>
+<dd>
+A rational function is defined as the quotient of polynomials in which the denominator has a degree of at least . In other words, there must be a variable in the denominator.
+</dd> 
+
+<dt><b>What is a  rational function example?</b></dt>
+<dd>
+Any function of one variable, x, is called a rational function if, it can be represented as f(x) = p(x)/q(x), where p(x) and q(x) are polynomials such that q(x) ≠ 0. For example, f(x) = (x2 + x - 2) / (2x2 - 2x - 3) is a rational function and here, 2x2 - 2x - 3 ≠ 0.
+</dd>
+
+<dt><b>What are rational function?</b></dt>
+<dd>
+A rational function is one that can be written as a polynomial divided by a polynomial. Since polynomials are defined everywhere, the domain of a rational function is the set of all numbers except the zeros of the denominator.
+The general form of a rational function is <b>p(x)/q(x)<b>, where p(x) and q(x) are polynomials and q(x)≠0.
+</dd> 
+
+<dt><b>What is the range of a rational function?</b></dt>
+<dd>
+The parent function of a rational function is f(x)=1x and the graph is a hyperbola . The domain and range is the set of all real numbers except 0 .
+</dd>
+</div>
+    <!-- Add more slides as needed -->
+  </div>
+  <div id="prevBtn">&lt;</div>
+  <div id="nextBtn">&gt;</div>
+</div>
+
+<script>
+  const sliderContent = document.getElementById('slider-content');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const translateValue = -index * 100 + '%';
+    sliderContent.style.transform = 'translateX(' + translateValue + ')';
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = sliderContent.children.length - 1;
+    }
+    showSlide(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < sliderContent.children.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    showSlide(currentIndex);
+  });
+</script>
+    <section> 		
 </body>
 </html>
