@@ -13,8 +13,8 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #3498db;
+      		color: #fff;
             text-align: center;
             padding: 1em;
         }
@@ -85,6 +85,11 @@
     #nextBtn {
       right: 0;
     }
+
+		section{
+		text-align: center;
+		}
+
     </style>
 </head>
 <body>
@@ -98,12 +103,26 @@
             <a href="https://hiimnew123.github.io/ExpoCalc-js/expocalc">Quadratic function calculator</a>
         <a href="https://hiimnew123.github.io/ExpoCalc-js/Linear">Linear function calculator</a>
         <a href="https://hiimnew123.github.io/ExpoCalc-js/Rational">Rational function calculator</a>
-	<a href="">About Us</a>
+		  <a href="">About Us</a>
     </nav>
 
     <section>
 		<h2>Welcone to EXPOCALC!</h2>
 		<p>An educational technology made to help students and life long learners build knowledge and develop skills in Mathematics. Do you wish to explore different calculators with us? Then let's get started.</p>
+		
+		<p>Click on the practice test first to test your knowledge</p>
+		
+		
+		<button onclick="redirect()">Practice Test</button>
+		
+		
+  <script>
+    function redirect() {
+      // Change the URL to the desired destination
+      window.location.href = 'https://hiimnew123.github.io/ExpoCalc-js/test'; 
+    }
+  </script>
+		
 		
 <div id="slider-container">
   <div id="slider-content">
@@ -208,6 +227,10 @@ The parent function of a rational function is f(x)=1x and the graph is a hyperbo
     showSlide(currentIndex);
   });
 </script>
-    <section> 		
+    <section>
+
+<footer>
+
+</footer> 		
 </body>
 </html>
