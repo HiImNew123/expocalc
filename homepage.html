@@ -10,18 +10,29 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            justify-content: center;
+            align-items: center;
         }
 
         header {
             background-color: #3498db;
-      		color: #fff;
+            color: #fff;
             text-align: center;
             padding: 1em;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         nav {
             background-color: #ddd;
             padding: 1em;
+            position: fixed;
+            width: 100%;
+            top: 150px;
+            z-index: 1000;
+            text-align: center;
         }
 
         nav a {
@@ -32,64 +43,67 @@
 
         section {
             padding: 2em;
+            margin-top: 180px;
         }
 
+        h2, p, dt, dd {
+            text-align: center;
+            font-size: 20px;
+        }
 
-		h2{
-		text-align:center;
-		}
+        dd {
+            margin: 30px;
+        }
 
-		p{
-		text-align:center;
-		}
-		
-		dd{
-		margin:30px;
-		}
-		
-		dt{
-		font-size:30px;
-		}
-		
-		    #slider-container {
-      overflow: hidden;
-      margin: 20px;
-      border: 1px solid;
-      position: relative;
-    }
-		
-    #slider-content {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
+        dt {
+            font-size: 30px;
+        }
 
-    .slide {
-      flex: 0 0 100%;
-      box-sizing: border-box;
-      padding: 20px;
-      text-align: center;
-    }
+        .game-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            margin: 150px auto; 
+				margin-top: 10px;
+            text-align: center;
+        }
 
-    #prevBtn, #nextBtn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 18px;
-      cursor: pointer;
-    }
+        #equation {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
 
-    #prevBtn {
-      left: 0;
-    }
+        #answer {
+            width: 60px;
+            padding: 5px;
+            margin-right: 10px;
+        }
 
-    #nextBtn {
-      right: 0;
-    }
+        #feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
 
-		section{
-		text-align: center;
-		}
+        #score {
+            margin-top: 20px;
+        }
 
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -99,159 +113,111 @@
     </header>
 
     <nav>
-        <a href="https://hiimnew123.github.io/expocalc/homepage"><b>Home</b></a>
-            <a href="https://hiimnew123.github.io/ExpoCalc-js/Quadratic"><b>Quadratic function calculator</b></a>
+        <a href="https://hiimnew123.github.io/expocalc/homepage#"><b>Home</b></a>
+        <a href="https://hiimnew123.github.io/ExpoCalc-js/Quadratic"><b>Quadratic function calculator</b></a>
         <a href="https://hiimnew123.github.io/ExpoCalc-js/Linear"><b>Linear function slope calculator</b></a>
-        <a href="https://hiimnew123.github.io/ExpoCalc-js/Rational"><b>Brain Exercise</b></a>
-		  <a href="https://hiimnew123.github.io/ExpoCalc-js/m"><b>About Us</b></a>
+        <a href="https://hiimnew123.github.io/ExpoCalc-js/Rational"><b>Help</b></a>
+        <a href="https://hiimnew123.github.io/ExpoCalc-js/m"><b>About Us</b></a>
     </nav>
 
     <section>
-		<h2>Welcome to EXPOCALC!</h2>
-		<p>An educational technology made to help students and life long learners build knowledge and develop skills in Mathematics. Do you wish to explore different calculators with us? Then let's get started.</p>
-		
-		<p>Click on the practice test first to test your knowledge</p>
-		
-		
-		<button onclick="redirect()">Practice Test</button>
-		
-		
-  <script>
-    function redirect() {
-      // Change the URL to the desired destination
-      window.location.href = 'https://hiimnew123.github.io/ExpoCalc-js/test'; 
-    }
-  </script>
-		
-		
-<div id="slider-container">
-  <div id="slider-content">
-    <div class="slide">		<dl>
-		<dt><b>Quadratic function</b></dt>
-		<dd>A quadratic function is a function of the form f(x) = ax^2 + bx + c or y=ax^2 + bx + c, where a, b and c are real numbers and a ≠ 0.
-		</dd>
-		
-		
-		<dt><b>Examples of Quadratic functions</b></dt>
-		<dd>A quadratic function has a variable(mostly x or y) to the second power. An example would be x^2 - 4x + 2 or 2x^2 + 8x + 4. As long as it is the form ax^2 + bx + c it is a quadratic function.
-		</dd>
-		
-		
-		<dt><b>Graph of a Quadratic function</b></dt>
-		<dd>
-		The graph of a quadratic function is a <b>parabola</b>. If the parabola opens upward, the lowest point called the <b>minimum point</b> is the <b>vertex</b> of the parabola. If the graph opens upward, the vertex is at the highest point called the <b>maximum point</b>. 
-		</dd>
-		
-		
-		<dt><b>Graphing Quadratic functions</b></dt>
-		<dd>
-		A parabola will open upward and have a minimum point when the coefficients of y and x^2 have the same sign. It will open downward and have a a maximum point when the coefficients of y and x^2 have opposite signs.
-		</dd>
-		
-		
-		<dt><b>The range of a Quadratic function</b></dt>
-		<dd>
-		The range refers to all possible values of y. To find the range, determine the vertex. If the parabola opens up, the range includes the y-value of the vertex and all numbers greater than it. If the parabola opens down, the range includes the y-value of the vertex and all numbers less than it.
-		</dd>
-		
-		
-		<dt><b>3 Quadratic forms</b></dt>
-		<dd>
-		The <b>Standard form</b> is one, written as f(x) = ax^2 + bx + c. <b>Factored form</b> is another, which is written as f(x) = (x - p)(x - q). A third form is <b>Vertex form</b>, written as f(x) = a(x - h)^2 + k.
-		</dd>	
-</div>
-   
+        <h2>Welcome to EXPOCALC!</h2>
+        <p>An educational technology made to help students and life long learners build knowledge and develop skills in Mathematics. Do you wish to explore different calculators with us? Then let's get started.</p>
 
- <div class="slide"><dt><b>Linear function</b></dt>
+        <p>Before we get started, how about we have a warm-up exercise so that your brain does not get bombarded with information.</p>
 
+        <p>Below is a simple math game we created. The rules are simple, answer the simple math problem given to earn points. There is no time limit, but you only have one life. Enter a wrong answer, and the game ends. To start the game, simply press the start button whenever you are ready, the same goes when you're restarting.</p>
 
-<dd>
-A linear function is a function of the form f(x) = mx + b or y = mx + b where m and b are real numbers. Its  is a line with slope m and y-intercept b.
-</dd>
+        <p style="color: red">(NOTE: THE SYMBOL * IS A MULTIPLY SYMBOL)</p>
+    </section>
 
+    <div class="game-container">
+        <h1>Math Game</h1>
+        <p id="equation"></p>
+        <input type="text" id="answer" placeholder="Your answer">
+        <br>
+        <button onclick="checkAnswer()">Submit Answer</button>
+        <p id="feedback"></p>
+        <p id="score">Score: 0</p>
+        <button onclick="startGame()">Start</button>
+    </div>
 
-<dt><b>Linear function examples</b></dt>
-<dd>
-A linear function is a function that represents a straight line on the coordinate plane. For example, y = 3x - 2 represents a straight line on a coordinate plane and hence it represents a linear function. Since y can be replaced with f(x), this function can be written as f(x) = 3x - 2.
-</dd>
+    <script>
+        var score = 0;
 
+        function startGame() {
+            score = 0;
+            enableInput();
+            showEquation();
+        }
 
-<dt><b>Range of a Linear function</b></dt>
-<dd>
-Linear functions (almost) always have infinite domains and ranges. The exception is when the graph is a horizontal line. This happens for functions that equal a constant such as f(x) = b. These functions have infinite domains but a range that has only one value, b.
-</dd>
+        function enableInput() {
+            document.getElementById('answer').removeAttribute('disabled');
+            document.getElementById('answer').value = '';
+            document.getElementById('answer').focus();
+        }
 
-<dt><b>Forms of Linear functions</b></dt>
-<dd>
-There are also three(3) forms of of the linear equation, these are the <b>slope-intercept form</b> that has a form y = mx + b, where m is the slope and b is the y-intercept, the <b>standard form</b> with the form Ax + By = C, where A, B, and C are integers and A ≥ 0. A and B can be zero but not both at the same time, and finally the <b>general form</b> with the form Ax + By + C = 0,, where A or B can be zero but not both at the same time.
-</dd>
+        function showEquation() {
+            var num1 = Math.floor(Math.random() * 10);
+            var num2 = Math.floor(Math.random() * 10);
+            var operator = Math.random() < 0.5 ? '+' : (Math.random() < 0.5 ? '-' : '*');
 
-</div>
-    <div class="slide"><dt><b>Rational function</b></dt>
+            var equation = `${num1} ${operator} ${num2}`;
+            document.getElementById('equation').textContent = equation;
+        }
 
-<dd>A rational function is a function that is the ratio of polynomials. Any function of one variable, x, is called a rational function if, it can be represented as f(x) = p(x)/q(x), where p(x) and q(x) are polynomials such that q(x) ≠ 0. 
-</dd>
+        function checkAnswer() {
+            var userAnswer = parseInt(document.getElementById('answer').value, 10);
 
-<dt><b>Exmaples of Rational function</b></dt>
- <dd>
-As stated above, rational functions take the form <b>p(x)/q(x)</b> and q(x) cannot be equal to 0. For example, f(x) = (x^2 + x - 2)/(2x^2. - 2x -3) is a rational function since the value q(x) is not 0.
-</dd>
+            var equationParts = document.getElementById('equation').textContent.split(' ');
+            var num1 = parseInt(equationParts[0], 10);
+            var num2 = parseInt(equationParts[2], 10);
+            var operator = equationParts[1];
 
+            var correctAnswer;
 
-<dd>
-For a more in depth guide in rational functions click the link below.
-</dd>
+            switch (operator) {
+                case '+':
+                    correctAnswer = num1 + num2;
+                    break;
+                case '-':
+                    correctAnswer = num1 - num2;
+                    break;
+                case '*':
+                    correctAnswer = num1 * num2;
+                    break;
+            }
 
+            if (userAnswer === correctAnswer) {
+                document.getElementById('feedback').textContent = 'Correct!';
+                score++;
+            } else {
+                document.getElementById('feedback').textContent = `Incorrect. The correct answer is ${correctAnswer}. Game Over!`;
+                disableInput();
+                return; // End the game
+            }
 
-<a href="https://youtu.be/DeqTiZE30Kc?si=Dd-HJjns6oUWO1e4"><b>JUST DO IT<b/></a>
+            document.getElementById('score').textContent = `Score: ${score}`;
+            showEquation();
+            enableInput();
+        }
 
+        function disableInput() {
+            document.getElementById('answer').setAttribute('disabled', 'true');
+        }
+    </script>
 
-<dd>click for fun ;)</dd>
-
-<a href="https://youtu.be/dQw4w9WgXcQ?si=s6TR1rjoALXU_pPu">;)</a>
-
-
-</div>
-
-  </div>
-  <div id="prevBtn">&lt;</div>
-  <div id="nextBtn">&gt;</div>
-</div>
-
-<script>
-  const sliderContent = document.getElementById('slider-content');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-
-  let currentIndex = 0;
-
-  function showSlide(index) {
-    const translateValue = -index * 100 + '%';
-    sliderContent.style.transform = 'translateX(' + translateValue + ')';
-  }
-
-  prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-    } else {
-      currentIndex = sliderContent.children.length - 1;
-    }
-    showSlide(currentIndex);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    if (currentIndex < sliderContent.children.length - 1) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-    }
-    showSlide(currentIndex);
-  });
-</script>
-    <section>
-
-<footer>
-
-</footer> 		
+    <script>
+        window.onscroll = function() {
+            // Check if the user has scrolled down, then add a class to the header and nav
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.querySelector('header').classList.add('scrolled');
+                document.querySelector('nav').classList.add('scrolled');
+            } else {
+                document.querySelector('header').classList.remove('scrolled');
+                document.querySelector('nav').classList.remove('scrolled');
+            }
+        };
+    </script>
 </body>
 </html>
