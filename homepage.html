@@ -104,6 +104,46 @@
         button:hover {
             background-color: #45a049;
         }
+
+		    #slider-container {
+      overflow: hidden;
+      margin: 20px;
+      border: 1px solid;
+      position: relative;
+    }
+		
+    #slider-content {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #prevBtn, #nextBtn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #prevBtn {
+      left: 0;
+    }
+
+    #nextBtn {
+      right: 0;
+    }
+
+		section{
+		text-align: center;
+		}
+
     </style>
 </head>
 <body>
@@ -141,6 +181,125 @@
         <p id="score">Score: 0</p>
         <button onclick="startGame()">Start</button>
     </div>
+
+
+<p><i>Mathematics knows no races or geographic boundaries; for mathematics, the cultural world is one country.</i><p/>
+<p>--David Hilbert, a German mathematician</p>
+
+<p>Now that your brain is ready and more active it's time to learn all about quadratic and linear functions.</p>
+
+<section>
+<div id="slider-container">
+  <div id="slider-content">
+    <div class="slide">		<dl>
+		<dt><b>Quadratic function</b></dt>
+		<dd>A quadratic function is a function of the form f(x) = ax<sup>2</sup> + bx + c or y=ax<sup>2</sup> + bx + c, where a, b and c are real numbers and a ≠ 0.
+		</dd>
+		
+		
+		<dt><b>Examples of Quadratic functions</b></dt>
+		<dd>A quadratic function has a variable(mostly x or y) to the second power. An example would be x<sup>2</sup> - 4x + 2 or 2x<sup>2</sup> + 8x + 4. As long as it is the form ax<sup>2</sup> + bx + c it is a quadratic function.
+		</dd>
+		
+		
+		<dt><b>Graph of a Quadratic function</b></dt>
+		<dd>
+		The graph of a quadratic function is a <b>parabola</b>. If the parabola opens upward, the lowest point called the <b>minimum point</b> is the <b>vertex</b> of the parabola. If the graph opens upward, the vertex is at the highest point called the <b>maximum point</b>. 
+		</dd>
+		
+		
+		<dt><b>Graphing Quadratic functions</b></dt>
+		<dd>
+		A parabola will open upward and have a minimum point when the coefficients of y and x<sup>2</sup> have the same sign. It will open downward and have a a maximum point when the coefficients of y and x<sup>2</sup> have opposite signs.
+		</dd>
+		
+		
+		<dt><b>The range of a Quadratic function</b></dt>
+		<dd>
+		The range refers to all possible values of y. To find the range, determine the vertex. If the parabola opens up, the range includes the y-value of the vertex and all numbers greater than it. If the parabola opens down, the range includes the y-value of the vertex and all numbers less than it.
+		</dd>
+		
+		
+		<dt><b>Three Quadratic forms</b></dt>
+		<dd>
+		The <b>Standard form</b> is one, written as f(x) = ax<sup>2</sup> + bx + c. <b>Factored form</b> is another, which is written as f(x) = (x - p)(x - q). A third form is <b>Vertex form</b>, written as f(x) = a(x - h)<sup>2</sup> + k.
+		</dd>	
+</div>
+   
+
+ <div class="slide"><dt><b>Linear function</b></dt>
+
+
+<dd>
+A linear function is a function of the form f(x) = mx + b or y = mx + b where m and b are real numbers. Its  is a line with slope m and y-intercept b.
+</dd>
+
+
+<dt><b>Linear function examples</b></dt>
+<dd>
+A linear function is a function that represents a straight line on the coordinate plane. For example, y = 3x - 2 represents a straight line on a coordinate plane and hence it represents a linear function. Since y can be replaced with f(x), this function can be written as f(x) = 3x - 2.
+</dd>
+
+
+<dt><b>Range of a Linear function</b></dt>
+<dd>
+Linear functions (almost) always have infinite domains and ranges. The exception is when the graph is a horizontal line. This happens for functions that equal a constant such as f(x) = b. These functions have infinite domains but a range that has only one value, b.
+</dd>
+
+<dt><b>Forms of Linear functions</b></dt>
+<dd>
+There are also three(3) forms of of the linear equation, these are the <b>slope-intercept form</b> that has a form y = mx + b, where m is the slope and b is the y-intercept, the <b>standard form</b> with the form Ax + By = C, where A, B, and C are integers and A ≥ 0. A and B can be zero but not both at the same time, and finally the <b>general form</b> with the form Ax + By + C = 0,, where A or B can be zero but not both at the same time.
+</dd>
+
+<p>Click on the links below to learn more about quadratic and linear functions</p>
+
+
+<a href="https://youtu.be/f0GXjlCZDsk?si=JuUAKRIYPIIL0Wfs">Quadratic Function</a>
+
+<a href="https://youtu.be/BtcKotD6Ni8?si=QEUGQSw0-84YCyz2">Linear function</a>
+
+<p>Video credit to <b><a href="https://youtube.com/@SenorPabloTV?si=KAiHvuJkNLJCFPUT">Senior Pablo TV</a></b> and <b><a href="https://youtube.com/@TheOrganicChemistryTutor?si=rKpGgCkttJWKWSLj">The Organic Chemistry Tutor</a></b></p>
+
+</div>
+
+
+  </div>
+  <div id="prevBtn">&lt;</div>
+  <div id="nextBtn">&gt;</div>
+</div>
+
+<script>
+  const sliderContent = document.getElementById('slider-content');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const translateValue = -index * 100 + '%';
+    sliderContent.style.transform = 'translateX(' + translateValue + ')';
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = sliderContent.children.length - 1;
+    }
+    showSlide(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < sliderContent.children.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    showSlide(currentIndex);
+  });
+</script>
+    <section>
+
 
     <script>
         var score = 0;
