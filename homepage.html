@@ -5,41 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXPOCALC</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            justify-content: center;
-            align-items: center;
-        }
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+}
 
-        header {
-            background-color: #3498db;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-        nav {
-            background-color: #ddd;
-            padding: 1em;
-            position: fixed;
-            width: 100%;
-            top: 150px;
-            z-index: 1000;
-            text-align: center;
-        }
+nav {
+    background-color: #ddd;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 140px;
+    z-index: 1000;
+    text-align: center;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            margin: 0 1em;
-        }
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 1em; /* Adjusted margin */
+    display: inline-block; /* Display items horizontally */
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    nav a {
+        margin: 0.5em; /* Adjusted margin for better spacing on smaller screens */
+    }
+}
 
         section {
             padding: 2em;
@@ -143,6 +153,13 @@
 		section{
 		text-align: center;
 		}
+		
+		@media only screen and (max-width: 600px) {
+    nav a {
+        margin: 0.5em; /* Adjusted margin for better spacing on smaller screens */
+    }
+}
+
 
     </style>
 </head>
@@ -174,7 +191,7 @@
     <div class="game-container">
         <h1>Math Game</h1>
         <p id="equation"></p>
-        <input type="text" id="answer" placeholder="Your answer">
+        <input type="tel" id="answer" placeholder="Your answer">
         <br>
         <button onclick="checkAnswer()">Submit Answer</button>
         <p id="feedback"></p>
