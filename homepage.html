@@ -201,7 +201,7 @@ nav a {
 
 <p>Next is a practice test to test how much you know about the topics below</p>
 
-<a href="https://hiimnew123.github.io/ExpoCalc-js/test">Practice Test</a>
+<button id="redirectButton">Practice Test</button>
 
 <p>Now that your brain is ready and more active it's time to learn all about quadratic and linear functions.</p>
 
@@ -383,6 +383,14 @@ There are also three(3) forms of of the linear equation, these are the <b>slope-
         }
     </script>
 
+<script>
+    // JavaScript to handle redirection
+    document.getElementById('redirectButton').addEventListener('click', function() {
+        // Change 'destination.html' to the actual URL of the page you want to redirect to
+        window.location.href = '"https://hiimnew123.github.io/ExpoCalc-js/test"';
+    });
+</script>
+	    
     <script>
         window.onscroll = function() {
             // Check if the user has scrolled down, then add a class to the header and nav
